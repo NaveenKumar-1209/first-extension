@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name":"IRCTC-Extension",
+    "description":"My own extension",
+    "version":"1.0.0",
+    "icons":{
+        "16":"icon.png",
+        "48":"icon.png",
+        "128":"icon.png"
+    },
+    "permissions": [
+    "storage",
+    "scripting",
+    "webNavigation",
+    "tabs",
+    "webRequest",
+    "clipboardRead",
+    "clipboardWrite"
+    ],
+    "host_permissions":["*://*/*"],
+    "chrome_url_overrides":{
+        "newTab":"newTab.html"
+    },
+    "action":{
+        "default_title":"Click me",
+        "default_popup":"popup.html"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type":"module"
+    },
+    "options_page":"options.html",
+    "content_scripts": [
+        {
+          "matches": ["https://*"],
+          "js": ["contentScript.js"]
+        }
+    ]
+}

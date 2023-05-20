@@ -1,0 +1,22 @@
+.login-root{
+    width: 100%;
+    height:100%;
+}
+.form-submit{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-form{
+    padding:0.5rem;
+    border: 2px solid rgba(0,0,0,0.50);
+    border-radius: 3px;
+}
+.btn{
+    background-color: #34abeb;
+    padding:0.5rem;
+    margin-left: 1rem;
+    color:#fff;
+    border-radius: 3px;
+}
